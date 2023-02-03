@@ -23,15 +23,17 @@ export const Data = () => {
   return (
     <div className="row"> 
       {
-        singleProductData.products.map((item)=>
+        allProductsData.products.map((item)=>
          <div className="col-6" id={item.id}>
-          <img src={item.images[0]} alt="" />
-          <title>{item.title}</title>
-          <h3>Price : {item.price}</h3>
-          <p> 
-            <b>Description : </b> 
-            <br /> 
-            {item.description.slice(0,50)}</p>
+          <div>
+            <img src={item.images[0]} alt="" />
+            <title>{item.title}</title>
+            <h3>Price : {item.price}</h3>
+            <p> 
+              <b>Description : </b> 
+              <br /> 
+              {item.description.slice(0,50)}</p>
+          </div>
          </div>
         )
       }
